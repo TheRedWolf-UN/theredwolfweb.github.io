@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/fonts.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Actividad2</title>
+</head>
+<body>
+    <header>
+        <h1>EL DIARIO DEL HACKER</h1>
+        <p id="matricula">
+            Jesús Anthony "TheRedWolf"<br>
+            73087
+        </p>
+    </header>
+    <p id="leyenda">"Esta es una página es un blog en donde iré publicando sobre mis avances en el hacking ético."</p>
+ 
+    <div id="investigacion">
+        <h2>Investigación</h2>
+        <div class="block" id="ips">
+            <h3>Concepto y clasificación de IPS</h3>
+            <p>
+                Antes de declarar el consepto de IPS es necesario entender que es una IDS como contexto.<br><br>
+                Un Intrusion Dectection System (IDS) es una función en la que se dedica a supervisar y detectar amenazas o actividades sospechosas para poder emitir alertas que después serán analizadas en un Centro de Operaciones de Seguridad (SOC).<br>
+                Ahora, una Intrusion Prevention System (IPS) sería como una extensión de los IDS. Estos tienen la característica de bloquear trafico y realizar tareas similares a un Firewall. La IPS se define como un software o dispositivo que detecta y actúa en contra de la amenaza. Estos se clasifican según la función que cumplen.
+            </p>
+            <h4>Host-based IPS (HIPS)</h4>
+            <p>Esta solo se aplica en un host. Detecta y previene todas las actividades sospechosas de un host.</p>
+
+            <h4>Network-based IPS (NIPS)</h4>
+            <p>Previene ataques a través de la monitorización de la red y subred, toma medidas proactivas con el fin de bloquear o mitigar aquellas amenazas en tiempo real.</p>
+            
+            <h4>Wireless-based IPS (WIPS)</h4>
+            <p>Esta se enfoca en redes inalámbricas, proporcionando una capa de seguridad adicional contra ataques dispositivos y puntos de acceso Wi-Fi.</p>
+
+            <h4>Network Behavior Analysis (NBA)</h4>
+            <p>Se centra en estudiar el tráfico de la red en busca de desviaciones como la tasa de paquetes por segundo o la cantidad de conexiones por dispositivo</p>
+        </div>
+        <div class="block" id="firewall">
+            <h3>Concepto y clasificación de Firewall</h3>
+            <p>
+                Un Firewall es un sistema o un grupo de sistemas que impone una politica de seguridad entre la organización de la red privada y el Internet. Determina cuál de los servicios de red pueden ser accedidos dentro de esta por los hosts de fuera. El Firewall es el único en autorizar el paso del tráfico ofreciendo una "inmunidad", pero, si el atacante logra traspasarlo, ya no puede ofrecer la misma protección. A continuación se presentan los tipos de Firewall
+            </p>
+
+            <h4>Firewall de filtrado de paquetes</h4>
+            <p>Trabaja al nivel de la capa de red (capa 3) como un filtro de paquetes IP. Se pueden realizar filtros según los distintos campos de los paquetes IP: dirección de origen, dirección de destino. También puede trabajar con filtrados de la capa de transporte (capa 4) o en la capa de enlace de datos (capa 2).</p>
+
+            <h4>Firewall de capa de aplicación</h4>
+            <p>Trabaja en la capa de aplicación (capa 7) en donde realizan filtrados con los protocolos de esta capa; por ejemplo, si filtramos mediante el protocolo HTTP, se puede realizar filtrados según la URL. El Firewall de capa 7 normalmente se le denomina como Proxy y permite que los hosts de una organización puedan entrar a Internet de una forma controlada.</p>
+            
+            <h4>Firewall de inspección de paquetes</h4>
+            <p>Este Firewall trabaja desde la capa de red hasta la capa de aplicación haciendo una minusiosa inspección de todas las capas antes de poder ser denegado o aceptado el tráfico. Generalmente son instalados cuándo se requiere seguridad sencible al contexto y en aplicaciones muy complejas.</p>
+
+            <h4>Firewall personal</h4>
+            <p>Son aplicaciones disponibles para el usuario común que deseen conectarse a una red externa insegura y mantener su dispositivo a salvo de ataques informáticos</p>
+        </div>
+        <div class="block" id="honeypots">
+            <h3>Concepto y clasificación de Honeypots</h3>
+            <p>
+                Un Honeypot es un recurso de red destinado a ser atacado o comprometido con la finalidad de obtener información acerca de los métodos que utiliza un atacante para ingresar a una red. Es una trampa que se utiliza para identificar, evitar y, en cierta medida, neutralizar la amenaza. También es generalmente utilizado como un sistema de vigilancia, asi como, un mecanismo de alerta temprana. A continuación se presentan los diferentes tipos de Honeypots.
+            </p>
+
+            <h4>Honeypots de producción</h4>
+            <p>
+                Estos Honeypots están diseñados principalmente para la seguridad y defensa de redes. Se implementan de manera colateral a las redes de datos o infrastructuras en ambientes reales, son utilizados para proteger a las organizaciones. A este tipo de Honeypot se le da más importacia debido a las herramientas de detección.
+            </p>
+
+            <h4>Honeypots de investigación</h4>
+            <p>
+                Estos son implementados con la finalidad de recolectar información sobre las acciones de los intrusos. Se utilizan para obtener una visión más clara sobre las operaciones, estrategias y los motivos de ataques, estudiar los patrones de ataque y amenazas de todo tipo. Son difíciles de manejar y desplegar, pero son capaces de reunir una gran cantidad de información.
+            </p>
+
+            <h4>Honeypots de Baja interación</h4>
+            <p>
+                Estos Honeypots trabajan únicamente emulando servicios y sistemas operativos. La actividad del atacante se encuentra limitada al nivel de emulación del Honeypot. Los servicios emulados mitigan el riesgo de penetración, conteniendo la actividad del instruso que nunca tiene acceso al sistema operativo real donde puede atacar o dañar otros sistemas. Por su simplicidad, son fáciles de utilizar y mantener con un riesgo mínimo.
+            </p>
+
+            <h4>Honeypots de alta interacción</h4>
+            <p>
+                Este tipo de Honeypot implica la utilización de sistemas operativos y aplicaciones reales monitoreadas con harware real sin la utlización de un software de emulación. Se tiene la posibilidad de capturar mucha información sobre el modus operandi de los atacantes. El peligro de este tipo de Honeypot es que se trata de un sistema realmente expuesto, aumentando el riesgo de que el atacante utilice este sistema como punto de entrada y expandirse a un dispositivo legímitimo de una orgnización.
+            </p>
+        </div>
+        <div class="block" id="honeynets">
+            <h3>Concepto y clasificación de Honeynets</h3>
+            <p>
+                Una Honeynet es una red compuesta por Honeypots y otras herramientas de detección, esta configurada con vulnerabilidades para atraer a los atacantes. El objetivo principal de esta estructura es probar la seguridad de la red incentivando los ataques a la misma. Aunque no exista una clasificación como tal, existe una estandarización definida por la comunidad de <i>"The Honeynet Proyect"</i>, en donde, se definen 3 tipos de arquitecturas de Honeynet.
+            </p>
+
+            <h4>Honeynets de primera generación (GEN I)</h4>
+            <p>
+                Desarrollado en 2001, esta arquitectura se divide en tres secciones principales: el Internet, la red de produción o red administrativa y la Honeynet. Debe haber un Firewall entre el Internet y un Router, los cuales, deben estar correctamente configurados para permitir el trafico del Internet al Honeynet protegiendo en todo momento la red de administración. Ya una vez atacado la Honeynet, estos datos deben ser almacenados en archivos logs o en bases de datos locales.
+            </p>
+
+            <h4>Honeynets de segunda generación (GEN II)</h4>
+            <p>
+                Fue desarrolado en 2002 para solucionar los problemas de los Honeypots GEN I. El principal combio es la implementación del Honeynet Gateway comúnmente conocido como Honeywall, dónde, se combina con un IDS y un Firewall. La princial ventaja es el indetectable cambio a un honeywall, ya que, no existen saltos de enrutamiento ni decrementos en el TTL por la configuración en modo bridge del honeywall.
+            </p>
+
+            <h4>Honeynets de tercera generación (GEN III)</h4>
+            <p>
+                Apareciendo al rededor del año 2004, esta evoluvión solo trae cambios de mejora en la recoleción de datos. Se incluyeron herramientas de gestión remotas y se instaló en muchos el uso de una interfáz web para visualizar la información recolectada y administrando todo desde un mismo punto de vista.
+            </p>
+        </div>
+        <div class="block" id="seguridad_acceso">
+            <h3>Seguridad de Acceso (Control de acceso)</h3>
+            <p>
+                Lo que se busca en el control de acceso es definir administrativamente los controles físicos y técnicos que un usuario puede tener. Según a la teoría de <i>Cisco</i>, se plantea al sujeto; definido como una entidad activa que desea enviar una petición para obtener acceso a un recurso, al objeto; definido como una entidad pasiva la cual es, o contiene, la información que solicita el sujeto, y al Control de Acceso; que es un proceso para garantizar, prevenir o revocar el acceso hacia el objeto.<br>
+
+                <h4>Identificación</h4>
+                <p>
+                    La identificación es el proceso de otorgar/proveer la identidad al sujeto, cabe recalcar que estamos definiendo qué identidad se debe usar para identificar a un sujeto, más no le estmos otorgando una; eso es trabajo de la Autenticación. Se le puede proveer un nombre de usuario, una dirección IP o un ID con el fin de poder reconocer al sujeto. Se recomienda que para nomobres de usuario, se usen nombres no descriptivos; por ejemplo, el usuario <i>"Administrador"</i> viola con esta recomendación.
+                </p>
+
+                <h4>Autenticación</h4>
+                <p>
+                    Es el proceso de proveer una identidad a un sujeto. Una vez que se ha identificado el sujeto, un responsable debe verificar que de en verdad se trate del sujeto que se hace presentar. Para ello, aquí hay algunas maneras de hacerlo. <br><br>
+                    <b>Autenticación por conocimiento:</b> Esta autenticación plantea que el sujeto provea un secreto que solo él debería saber. Estos pueden ir desde un PIN, contraseña o una pregunta específica. <br><br>
+                    <b>Autenticación por pertenencia:</b> Aquí al usuario se le solicitará algo que pruebe una pertenencia a una organización. Como ejemplo, puede ser una credencial o una idetificación de la organización. <br><br>
+                    <b>Autenticación por rasgos:</b> Aquí el sistema debe autenticar al sujeto basandose en las características físicas del sujeto. Esto puede ir desde huellas digitales, reconocimiento facial, retina e iris, voz, etc.
+                </p>
+            </p>
+        </div>
+    </div>
+    <div id="referencias">
+        <h2>Referencias Bibliograficas</h2>
+        <div class="block" id="referencias">
+            <p>
+                González G., Venessa A. (2024). <i>Implementación de servicios de seguridad en redes mediante DevOps: implementación de un IPS mediante herramientas de DevOps.</i> https://bibdigital.epn.edu.ec/handle/15000/25974
+            </p>
+            <p>
+                Cuenca J. (2016). <i>Firewall o Cortafuegos.</i> https://www.researchgate.net/profile/Jackson-Cuenca/publication/295256426_FIREWALL_O_CORTAFUEGOS/links/56c8a7ed08ae96cdd06baf7c/FIREWALL-O-CORTAFUEGOS.pdf
+            </p>
+            <p>
+                Castro A., Adolfo E., Correa L., Francisco D. (2013). <i>Honeypot: ventajas y desventajas como mecanismo para la prevención de intrusos informáticos.</i> http://repository.unipiloto.edu.co/handle/20.500.12277/2607
+            </p>
+            <p>
+                Navarro B., Javier P. (2022). <i>Análisis y estudio de Honeynets en entorno doméstico e institucional</i>. https://hdl.handle.net/10612/24372
+            </p>
+            <p>
+                Santos O. (2021). <i>Cisco CyberOps Associate CBROPS 200-201 Official Cert Guide</i>. https://elhacker.info/manuales/Hacking%20y%20Seguridad%20informatica/Cisco%20CyberOps/Cisco.Press.Cisco.CyberOps.Associate.CBROPS.200-201.Official.Cert.Guide..pdf
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        Jesús Anthony "TheRedWolf" - 2026
+    </footer>
+</body>
+</html>
