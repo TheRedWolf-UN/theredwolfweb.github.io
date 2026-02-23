@@ -1,0 +1,179 @@
+/* =======================
+   RESET BÁSICO
+======================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: HackNerdFont;
+}
+
+/* =======================
+   VARIABLES DE COLOR
+======================= */
+:root {
+    --bg-dark: #0a0a0f;
+    --bg-card: #12121a;
+
+    --neon-red: #ff2e63;
+    --neon-green: #00ff9c;
+    --neon-blue: #00eaff;
+    --neon-purple: #9e3ff8;
+    --neon-pink: #ff5dfc;
+
+    --text-main: #e5e5e5;
+    --text-muted: #c4c3c3;
+}
+
+/* =======================
+   BODY GENERAL
+======================= */
+body {
+    background: radial-gradient(circle at top, #111122, var(--bg-dark));
+    color: var(--text-main);
+    min-height: 100vh;
+}
+
+/* =======================
+   HEADER (RED vs BLUE)
+======================= */
+header {
+    text-align: center;
+    padding: 2.9rem 1rem 2.5rem;
+    background: linear-gradient(
+        135deg,
+        rgba(87, 15, 15, 0.699),   /* Red Team */
+        rgba(0, 23, 73, 0.616)    /* Blue Team */
+    );
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* TÍTULO PRINCIPAL */
+header h1 {
+    font-size: 2.9rem;
+    letter-spacing: 3px;
+    color: #ff2e2e; /* rojo limpio */
+    
+    /* glow mínimo y controlado */
+    text-shadow:
+        0 0 6px rgba(255, 46, 46, 0.4);
+
+    font-weight: 700;
+}
+
+/* SUBTÍTULO */
+header p {
+    margin-top: 0.6rem;
+    font-size: 1rem;
+    color: rgba(21, 242, 250, 0.85);
+    letter-spacing: 1px;
+}
+
+/* =======================
+   NAVBAR CENTRADA
+======================= */
+nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    background: rgba(18, 18, 26, 0.8);
+    border-radius: 50px;
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0.8rem;
+    transition: all 0.3s ease;
+}
+
+/* Hover neon dinámico */
+nav ul li a:hover {
+    color: var(--neon-green);
+    text-shadow:
+        0 0 10px var(--neon-green),
+        0 0 20px rgba(0, 255, 156, 0.7);
+}
+
+/* Línea inferior animada */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        var(--neon-green),
+        var(--neon-pink),
+        var(--neon-blue)
+    );
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* =======================
+   CONTENIDO PRINCIPAL
+======================= */
+main {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+section {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow:
+        0 0 20px rgba(168, 85, 247, 0.15),
+        0 0 40px rgba(0, 234, 255, 0.08);
+}
+
+section h2 {
+    color: var(--neon-purple);
+    margin-bottom: 1rem;
+}
+
+section p {
+    line-height: 1.7;
+    color: var(--text-muted);
+}
+
+/* =======================
+   FOOTER
+======================= */
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    background: rgba(10, 10, 15, 0.8);
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+footer p:last-child {
+    margin-top: 0.5rem;
+    color: var(--neon-pink);
+    text-shadow: 0 0 10px rgba(255, 93, 252, 0.6);
+}
