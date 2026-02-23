@@ -1,2 +1,7 @@
 title: TheRedWolf Web
 markdown: kramdown
+
+url: "https://theredwolf-un.github.io"
+baseurl: ""
+
+theme: minima
